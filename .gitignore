@@ -26,11 +26,7 @@ dist/
 *.sqlite3
 *.db
 
-# ----------------------------------
-# Environment variables / secrets
-# ----------------------------------
-.env
-.env.*
+
 
 # ----------------------------------
 # Test / coverage artifacts
