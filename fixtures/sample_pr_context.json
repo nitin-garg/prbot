@@ -1,0 +1,33 @@
+{
+  "repo_full": "org/scheduling-swap-request",
+  "pr_number": 123,
+  "url": "https://github.com/org/scheduling-swap-request/pull/123",
+  "title": "PROJ-1234: Convert primitive long to Long in swap request DTO",
+  "body": "This change updates the DTO and entity to use Long instead of primitive long to allow null handling in certain edge cases.",
+  "merged": true,
+  "merged_at_epoch": 1736659200,
+
+  "files": [
+    "src/main/java/com/example/api/SwapRequestDto.java",
+    "src/main/java/com/example/entity/SwapRequestEntity.java",
+    "src/test/java/com/example/api/SwapRequestDtoTest.java"
+  ],
+
+  "additions": 18,
+  "deletions": 12,
+
+  "commit_messages": [
+    "PROJ-1234 Convert primitive long to Long",
+    "Add null checks and defensive handling"
+  ],
+
+  "issue_comments": [
+    "Should we put this behind a feature toggle?",
+    "This touches the API surface and may impact clients."
+  ],
+
+  "review_comments": [
+    "Be careful with null handling here.",
+    "Do we have coverage for serialization changes?"
+  ]
+}

@@ -1,0 +1,98 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prbot"
+version = "0.1.0"
+description = "Explainable PR risk analysis with feedback-driven learning"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+
+authors = [
+  { name = "Nitin Garg", email = "im.nitingarg@gmail.com" }
+]
+
+keywords = [
+  "pull-request",
+  "risk-analysis",
+  "feature-flags",
+  "explainable-ai",
+  "ml-systems",
+  "developer-tools"
+]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Quality Assurance",
+  "Topic :: Software Development :: Version Control :: Git",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Operating System :: OS Independent"
+]
+
+dependencies = [
+  "PyGithub",
+  "requests",
+  "python-dotenv",
+  "rich",
+  "pyyaml",
+  "openai",
+  "pip-system-certs"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-cov"
+]
+
+[project.scripts]
+prbot = "prbot.__main__:main"
+
+[tool.setuptools]
+packages = ["prbot"]
+
+[tool.setuptools.package-data]
+prbot = [
+  "config.yaml"
+]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+addopts = "-ra -q"
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+
+[tool.coverage.run]
+branch = true
+source = ["prbot"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+
+"Development Status :: 4 - Beta"
+
+
+[project.urls]
+Homepage = "https://github.com/nitin-garg/prbot"
+Documentation = "https://github.com/nitin-garg/prbot/tree/main/docs"
+Issues = "https://github.com/nitin-garg/prbot/issues"

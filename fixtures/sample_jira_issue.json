@@ -1,0 +1,42 @@
+{
+  "id": "10042",
+  "key": "PROJ-1234",
+  "fields": {
+    "summary": "Fix null handling in swap request DTO",
+    "description": "A regression was reported where a null value caused a failure during request processing. This change adjusts handling to be more defensive.",
+    "issuetype": {
+      "name": "Defect"
+    },
+    "priority": {
+      "name": "P2"
+    },
+    "status": {
+      "name": "Closed"
+    },
+    "labels": [
+      "regression",
+      "api"
+    ],
+    "updated": "2025-01-12T14:22:11.000+0000",
+    "comment": {
+      "comments": [
+        {
+          "id": "c1",
+          "body": "This looks like a regression introduced in the previous release.",
+          "author": {
+            "displayName": "Engineer A"
+          },
+          "created": "2025-01-10T09:14:00.000+0000"
+        },
+        {
+          "id": "c2",
+          "body": "We should consider guarding this change behind a feature toggle.",
+          "author": {
+            "displayName": "Engineer B"
+          },
+          "created": "2025-01-11T16:40:00.000+0000"
+        }
+      ]
+    }
+  }
+}

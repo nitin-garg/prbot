@@ -1,0 +1,27 @@
+threshold:
+  foryes: 50
+  forno: 30
+weights:
+  jira_bonus_cap: 20
+  history_bonus_cap: 40
+paths:
+  risky:
+  - /api/
+  - /controller/
+  - /resource/
+  - /entity/
+  - /repository/
+  safe:
+  - /test/
+  - /tests/
+  - /docs/
+  - /doc/
+  - .md
+exemptions:
+  tests_only: true
+  docs_only: true
+policy:
+  allow_unclear: true
+thresholds:
+  'yes': 50
+  'no': 30

@@ -1,0 +1,8 @@
+PyGithub
+python-dotenv
+requests
+openai
+rich
+pytest
+pip-system-certs
+pyyaml
